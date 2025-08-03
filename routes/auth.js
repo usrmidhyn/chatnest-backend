@@ -27,6 +27,7 @@ router.post('/register', async (req, res) => {
         email: newUser.email
       }
     });
+    console.log("Received registration data:", req.body);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
